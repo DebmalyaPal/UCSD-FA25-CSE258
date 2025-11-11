@@ -4,11 +4,11 @@
 ---
 
 NOTE:  
-A. Create virtual environment using: ```python -m venv venv```
-B. While working, activate virtual environment: [LINUX] ```source venv/bin/activate```
-C. Install dependencies: ```pip install -r requirements.txt```
-D. After work, exit from virtual environment: ```deactivate```
- 
+A. Create virtual environment using: ```python -m venv venv```  
+B. While working, activate virtual environment: [LINUX] ```source venv/bin/activate```  
+C. Install dependencies: ```pip install -r requirements.txt```  
+D. After work, exit from virtual environment: ```deactivate```  
+
 ---
 
 #### HOMEWORK-1  
