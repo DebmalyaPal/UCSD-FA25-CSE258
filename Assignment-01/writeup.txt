@@ -1,0 +1,40 @@
+Task: Read Prediction
+
+For the read prediction task, I framed the problem as a binary classification (read = 1, not read = 0).
+- I constructed positive pairs directly from the ratings data and generated negative pairs by sampling user-book combinations not present in the ratings.  
+- To balance the dataset, I sampled an equal number of negative pairs.  
+- I engineered features such as the number of books read by a user, the number of ratings a book received, and the average rating of a book.  
+- Categorical features (userID, bookID) were mapped to indices and one-hot encoded, while numeric features were scaled and passed to the pipeline.  
+- I experimented with Logistic Regression and Random Forest classifiers (SVM also, but it was super slow and irresponsive).
+- The final pipeline used Random Forest with preprocessing, trained on the full dataset.  
+- Predictions were generated for the pairs in file "pairs_Read.csv" and written to file "predictions_Read.csv".
+
+------------------------------------------------------------------------------------
+Task: Category Prediction
+
+For the category prediction task, I approached it as a text classification problem.  
+- Training and test data were loaded from JSON files.
+- Firstly, I studied the distribution of different classes (genre/categories) in the dataset and mapped their IDs to classes.
+- Review text was preprocessed: lowercased, punctuation removed, stopwords removed, stemming applied, and lemmatization performed.  
+- Additional features were engineered: normalized user ratings (scaled per user) and log-transformed vote counts.
+- Text features were vectorized using TF-IDF, and combined with numeric features into a single feature matrix.  
+- I trained a Logistic Regression classifier with L2 regularization and tuned parameters for stability.  
+- The model predicted one of five categories (Children’s, Comics/Graphic Novels, Fantasy, Mystery/Thriller, Romance).  
+- Predictions were written to file "predictions_Category.csv" in the required format.
+
+------------------------------------------------------------------------------------
+Task: Rating Prediction
+
+For the rating prediction task, I used a matrix factorization approach with bias terms.  
+- First, I read the training data (file: train_Interactions.csv.gz) and mapped each userID and bookID to integer indices.  
+- I initialized user and item biases, as well as latent factor matrices for users and books.  
+- Training was done using stochastic gradient descent, updating biases and latent factors after each rating.  
+- I included early stopping based on validation mean squared error to avoid overfitting.  
+- A small hyperparameter grid search was performed (latent dimension k, learning rate, regularization) to select the best parameters. 
+  (I tested on multiple combinations of latent dimension [1-10], learning rate [0.001 - 0.05] and regularization [0.02 - 0.1].
+  Ultimately, I found out the best combination was k=1, lr=0.01, reg=0.05)
+- For prediction, I combined the global mean rating, user bias, item bias, and the dot product of user and item latent vectors.  
+- If a user or book was unseen in training, I defaulted to the global mean and zero vectors.  
+- Predictions were clipped to the valid rating range [0, 5].  
+- Final predictions were written to file "predictions_Rating.csv" in the required format.
+

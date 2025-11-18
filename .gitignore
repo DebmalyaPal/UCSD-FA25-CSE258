@@ -1,11 +1,19 @@
-./venv
-./HOMEWORK-1/__pycache__
-./HOMEWORK-1/.ipynb_checkpoints
-./HOMEWORK-1/homework1.py
-./HOMEWORK-2/__pycache__
-./HOMEWORK-2/.ipynb_checkpoints
-./HOMEWORK-2/homework2.py
-./HOMEWORK-3/__pycache__
-./HOMEWORK-3/.ipynb_checkpoints
-./HOMEWORK-3/homework3.py
-./HOMEWORK-3/*.csv
+# Virtual environment
+venv/
+
+# Python caches
+__pycache__/
+*/__pycache__/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Generated predictions
+Datasets/assignment1/predictions_*.csv
+HOMEWORK-3/*.csv
+
+# Homework scripts (ignore only if not needed in repo)
+HOMEWORK-1/homework1.py
+HOMEWORK-2/homework2.py
+HOMEWORK-3/homework3.py

@@ -72,3 +72,16 @@ jupyter nbconvert --to script hw3_stub.ipynb --output homework3
 ---
 
 #### ASSIGNMENT-1
+This assignment consisted of 3 tasks and python code for the same can be found under Assignment-01 directory in `assignment1.py` file.  
+This file is the final version of the program that was submitted, initial work was done in notebook / colab - starting from data exploration and pre-processing to model evaluations.  
+Once the script is run, the predicted values for the evaluation dataset will be stored in stored in csv files under `../Datasets/assignment1/` directory.
+
+---
+
+#### HOMEWORK-4  
+(Will skip this homework as this is ungraded - base of 3 out of 4 counts)
+
+---
+
+#### ASSIGNMENT-2
+
