@@ -1,13 +1,11 @@
 # Virtual environment
-venv/
+**/venv
 
 # Python caches
-__pycache__/
-*/__pycache__/
+**/__pycache__
 
 # Jupyter notebook checkpoints
-.ipynb_checkpoints/
-*/.ipynb_checkpoints/
+**/.ipynb_checkpoints
 
 # Generated predictions
 Datasets/assignment1/predictions_*.csv

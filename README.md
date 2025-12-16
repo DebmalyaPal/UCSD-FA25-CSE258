@@ -3,7 +3,7 @@
 
 ---
 
-NOTE:  
+**NOTE**:  
 A. Create virtual environment using: ```python -m venv venv```  
 B. While working, activate virtual environment: [LINUX] ```source venv/bin/activate```  
 C. Install dependencies: ```pip install -r requirements.txt```  
@@ -33,7 +33,7 @@ jupyter nbconvert --to script hw1_stub.ipynb --output homework1
 
 #### HOMEWORK-2
 
-The code is in `hw2_stub.ipynb`.
+The code is in `hw2_stub.ipynb`.  
 The runner `hw2_runner.ipynb` can be used to run the code present in the stub.  
 Before proceeding with the runner, export the stub file as a Python file (name of Python file: `homework2.py`).
 
@@ -53,7 +53,7 @@ jupyter nbconvert --to script hw2_stub.ipynb --output homework2
 
 #### HOMEWORK-3
 
-The code is in `hw3_stub.ipynb`.
+The code is in `hw3_stub.ipynb`.  
 The runner `hw3_runner.ipynb` can be used to run the code present in the stub.  
 Before proceeding with the runner, export the stub file as a Python file (name of Python file: `homework3.py`).
 
@@ -74,7 +74,7 @@ jupyter nbconvert --to script hw3_stub.ipynb --output homework3
 #### ASSIGNMENT-1
 This assignment consisted of 3 tasks and python code for the same can be found under Assignment-01 directory in `assignment1.py` file.  
 This file is the final version of the program that was submitted, initial work was done in notebook / colab - starting from data exploration and pre-processing to model evaluations.  
-Once the script is run, the predicted values for the evaluation dataset will be stored in stored in csv files under `../Datasets/assignment1/` directory.
+Once the script is run, the predicted values for the evaluation dataset will be stored in stored in csv files under `/Datasets/assignment1/` directory.
 
 ---
 
@@ -85,3 +85,7 @@ Once the script is run, the predicted values for the evaluation dataset will be 
 
 #### ASSIGNMENT-2
 
+The final project for this course - **Restaurant Recommender System** - is hosted in a separate repository.  
+
+Project Topic: **Restaurant Recommender System**  
+Repository Link: [UCSD-FA25-CSE258-RecommenderSystem-Project](https://github.com/DebmalyaPal/UCSD-FA25-CSE258-RecommenderSystem-Project)
